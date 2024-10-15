@@ -23,6 +23,7 @@ require_once 'bootstrap.php';
 pl('--------- [Start testing bank account #1, No overdraft] --------');
 try {
     // show balance account
+    // crear una cuenta con balance 400 y mostrar su balance
 
     // close account
 

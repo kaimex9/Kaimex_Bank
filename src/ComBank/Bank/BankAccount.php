@@ -25,6 +25,32 @@ private $balance;
 private $status;
 private $overdraft;
 
+/*
+transaction(BankTransactionInterface): Void
+openAccount(): Boolean
+reopenAccount(): void
+closeAccount(): void
+*/
+
+function __construct($balance){
+    $this->balance = $balance;
+    $this->status = true;
+}
+
+public function openAccount(){
+$example = true;
+
+return $example;
+}
+
+public function reopenAccount(){
+    
+}
+
+public function closeAccount(){
+    
+}
+
 public function getBalance()
 {
 return $this->balance;
@@ -37,24 +63,12 @@ $this->balance = $balance;
 return $this;
 }
 
-public function getStatus()
-{
-return $this->status;
-}
-
-public function setStatus($status)
-{
-$this->status = $status;
-
-return $this;
-}
-
 public function getOverdraft()
 {
 return $this->overdraft;
 }
 
-public function setOverdraft($overdraft)
+public function applyOverdraft($overdraft)
 {
 $this->overdraft = $overdraft;
 
