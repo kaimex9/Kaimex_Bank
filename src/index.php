@@ -24,16 +24,20 @@ $account1 = new BankAccount(400);
 pl('--------- [Start testing bank account #1, No overdraft] --------');
 try {
     // show balance account
-    echo "Balance de la cuenta: ".$account1 -> getBalance();
+    echo "Account 1 Balance:".$account1 -> getBalance();
     // crear una cuenta con balance 400 y mostrar su balance
-
+    $bankAccount1 = new BankAccount(400);
     // close account
-
+    $bankAccount1 -> closeAccount();
+    echo "<br><br>BankAccount1 Closed";
     // reopen account
-
-
+    $bankAccount1 -> reopenAccount();
+    echo "<br><br>BankAccount1 Opened<br>";
     // deposit +150 
     pl('Doing transaction deposit (+150) with current balance ' . $bankAccount1->getBalance());
+    
+    //$bankAccount1 -> setBalance(($bankAccount1->getBalance())+150);
+    echo "BankAccount1 Balance after transaction:".$bankAccount1 -> getBalance();
 
     pl('My new balance after deposit (+150) : ' . $bankAccount1->getBalance());
 

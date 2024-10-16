@@ -42,11 +42,13 @@ return true;
 }
 
 public function reopenAccount(){
-    
+    if (!$this -> status) {
+        $this->status = true;
+    }
 }
 
 public function closeAccount(){
-    
+    $this -> status = false;
 }
 
 public function getBalance()
