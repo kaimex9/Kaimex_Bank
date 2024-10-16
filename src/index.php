@@ -20,9 +20,11 @@ require_once 'bootstrap.php';
 
 //---[Bank account 1]---/
 // create a new account1 with balance 400
+$account1 = new BankAccount(400);
 pl('--------- [Start testing bank account #1, No overdraft] --------');
 try {
     // show balance account
+    echo "Balance de la cuenta: ".$account1 -> getBalance();
     // crear una cuenta con balance 400 y mostrar su balance
 
     // close account

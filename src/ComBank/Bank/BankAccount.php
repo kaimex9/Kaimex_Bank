@@ -38,9 +38,7 @@ function __construct($balance){
 }
 
 public function openAccount(){
-$example = true;
-
-return $example;
+return true;
 }
 
 public function reopenAccount(){
@@ -53,7 +51,7 @@ public function closeAccount(){
 
 public function getBalance()
 {
-return $this->balance;
+return $this -> balance;
 }
 
 public function setBalance($balance)
